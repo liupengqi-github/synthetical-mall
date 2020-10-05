@@ -1,0 +1,123 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 82px;
+    border-bottom: 2px solid #b1191a;
+}
+.logo {
+    /*用margin会出现外边距塌陷的问题，会跟着一起下来*/
+    padding-top: 16px;
+}
+.registerarea {
+    margin-top: 20px;
+    height: 600px;
+    border: 1px solid #ccc;
+}
+.registerarea h3 {
+    height: 40px;
+    line-height: 40px;
+    /*盒子没有宽度 我们最先考虑的就是给padding*/
+    padding: 0 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+}
+.registerarea h3 em {
+    float: right;
+    font-size: 14px;
+}
+.registerarea a {
+    color: #c81623;
+}
+.reg_form {
+    width: 600px;
+    height: 400px;
+    /*background-color: pink;*/
+    margin: 40px auto 0;
+}
+.reg_form li {
+    margin-bottom: 15px;
+}
+.reg_form label {
+    /*因为label是行内元素 给宽高是没有反应的 所以要转化为行内块*/
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: right;
+}
+.inp {
+    width: 238px;
+    height: 36px;
+    border: 1px solid #ccc;
+}
+.error {
+    color: #df3033;
+    margin-left: 10px;
+}
+.error_icon,
+.success_icon {
+    /*因为i是行内元素 指定宽高 必须转化为行内块*/
+    display: inline-block;
+    /*有了行内块，就可以使用vertical-align 让图片跟蚊子对齐了*/
+    vertical-align: middle;
+    margin-top: -3px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/error.png");
+}
+.success {
+    margin-left: 10px;
+    color: #40b83f;
+}
+.success_icon {
+    background-image: url(../img/success.png);
+}
+.safe {
+    margin-left: 180px;
+}
+.safe em {
+    padding: 0 11px;
+    color: #fff;
+}
+.ruo {
+    background-color: #de1111;
+}
+.zhong {
+    background-color: #40b83f;
+}
+.qiang {
+    background-color: #f79100;
+}
+.agree {
+    padding: 25px 0;
+    margin-left: 103px;
+}
+.agree input{
+    vertical-align: middle;
+    margin: -1px 13px 0 0;
+}
+.agree a {
+    color: #1ba1e6;
+}
+.over {
+    margin-left: 115px;
+}
+.over input{
+    /*a是行内元素，要转化为块级元素*/
+    width: 200px;
+    height: 34px;
+    color: #fff;
+    background-color: #c81623;
+    cursor: pointer;
+}
+.footer {
+    height: 120px;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 30px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                                                                        <!--技术选型
+                                                                方案：我们采取单独制作移动页面方案
+                                                                技术：布局采取流失布局-->
+                                                              <!--（我们的流失布局只管宽度）-->
+    <meta charset="UTF-8">
+    <!--写上视口标签-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!--引入我们移动端CSS初始化样式-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--引入首页CSS样式-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--引入swiper CSS文件-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!--引入我们的swiper,js文件-->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!--因为我们的index.js依赖我们的swiper所以要放到前面，先有它才可以依赖-->
+    <script src="js/index.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<!--头部放个大盒子，大盒子里面放四个小li 没个小li设定不一样的百分比宽度-->
+<header class="app">
+    <ul>
+        <li> <!--这里采取的都是二倍图做法-->
+            <img src="img/error.png">
+        </li>
+        <li>
+            <img src="img/logo.png">
+        </li>
+        <li>打开京东App，购物更轻松</li>
+        <li>立即打开</li>
+    </ul>
+</header>
+<!--搜索 里面放一个盒子不要给宽度默认和父盒子一样宽，（两侧放两个定位的小盒子，我们把里面的盒子用margin或者padding挤到中间来，这样它的效果就是两边不动，中间自适应）这样缩放的时候就是自适应的-->
+<div class="search-wrap">
+    <div class="search-btn"></div>
+    <div class="search">
+        <div class="jd"></div>
+        <div class="sou"></div>
+    </div>
+    <div class="search-login">登录</div>
+</div>
+
+<div class="main-content">
+               <!--滑动图-->
+    <!--后缀名.dpg格式也是一个图片格式，是京东的有损压缩技术（允许压缩过程中损失一定的信息；虽然不能完全恢复原始数据，但是所损失的部分对理解原始图像的影响缩小，却换来了大得多的压缩比）
+    容量能小到百分之五十-->
+    <div class="slider">
+        <!-- Swiper 注意里面的结构和类名不能动-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="upload-产品图片/banner.dpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="upload-产品图片/banner1.dpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="upload-产品图片/banner2.dpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="upload-产品图片/banner3.dpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                <img src="upload-产品图片/banner.jpg" alt="">
+            </div>
+            </div>
+            <!--这是我们小圆点的结构-->
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+           <!-- 左右箭头-->
+<!--            <div class="swiper-button-next"></div>-->
+<!--            <div class="swiper-button-prev"></div>-->
+        </div>
+    </div>
+    <!--京东国际进口日-->   <!-- 先用一个大盒子div，里面放三个div，每个div的宽度各是33.33%里面放上图片（这样三张图片点击的时候就能跳转到不同的页面了）-->
+    <div class="brand">
+        <div><a href="#"><img src="upload-产品图片/pic1.jpg"></a></div>
+        <div><a href="#"><img src="upload-产品图片/pic2.jpg"></a></div>
+        <div><a href="#"><img src="upload-产品图片/pic3.jpg"></a></div>
+    </div>
+     <!--nav-->   <!--每个宽度是 20% 高度自动撑开-->
+    <div class="nav">
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/one.png" alt="">
+            <span>京东超市</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/two.png" alt="">
+            <span>数码电器</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/three.png" alt="">
+            <span>京东服饰</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/four.png" alt="">
+            <span>京东生鲜</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/five.png" alt="">
+            <span>京东到家</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/six.png" alt="">
+            <span>充值缴费</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/seven.png" alt="">
+            <span>9.9元拼</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/eight.png" alt="">
+            <span>领券</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/nine.png" alt="">
+            <span>领津贴</span>
+        </a>
+        <a href="#">
+            <!--webp图片格式：是谷歌开发目的是加快图片加载速度，压缩体积只有JPEG的三分之二，而DPG格式是在webp基础上开发的，清晰度对比没有什么差比-->
+            <img src="upload-产品图片/ten.png" alt="">
+            <span>PLUS会员</span>
+        </a>
+    </div>
+        <!--新闻模块-->
+    <div class="news">
+        <a href="#"><img src="upload-产品图片/new1.dpg" alt=""></a>
+        <a href="#"><img src="upload-产品图片/new2.dpg" alt=""></a>
+        <a href="#"><img src="upload-产品图片/new3.dpg" alt=""></a>
+    </div>
+    <!--东家小院-->
+    <div class="yard">
+        <img src="upload-产品图片/yard.jpg.dpg" alt="">
+    </div>
+    <div class="yard-content">
+        <div class="book">
+            <span>科普好书</span>
+            <p>精选优秀科普好书</p>
+            <img src="upload-产品图片/book1.dpg" alt="">
+            <img src="upload-产品图片/book2.jpg.dpg" alt="">
+        </div>
+        <div class="book">
+            <span>科普好书</span>
+            <p>精选优秀科普好书</p>
+            <img src="upload-产品图片/book1.dpg" alt="">
+            <img src="upload-产品图片/book2.jpg.dpg" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>

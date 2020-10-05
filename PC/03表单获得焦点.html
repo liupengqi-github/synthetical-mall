@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--                                             :focus 伪类选择器 用于选取获得焦点的元素，我们这里主要针对的是表单元素-->
+    <style>
+        input {
+            outline: none;
+            transition: all .5s
+        }
+        /*这个 input 获得了焦点 之后变化的样式，离开焦点还原*/
+        input:focus{
+            background-color: pink;
+            border: 1px solid orange;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<input type="text">
+</body>
+</html>

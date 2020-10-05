@@ -1,0 +1,294 @@
+body {
+    /*流失布局做法*/
+    width: 100%;
+    /*最大、最小宽度仿京东做法的，设置这个值之后，就保证缩到最小的时候不会变形*/
+    max-width: 640px;
+    min-width: 320px;
+    /*移动端需写属性*/
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    /*Helvetica:苹果电脑的默认字体   Sans-serif是专指西文中没有衬线的字体，与汉字字体中的黑体相对应。*/
+    font-family: -apple-system, Helvetica, sans-serif;
+    margin: 0 auto;
+    height: 1200px;
+}
+* {   /*a链接我们在 PC端上点击是没有问题的，可是到了移动端，一点击的时候，就会有高亮效果（一般一点击的时候，都会出来淡蓝色的背景色）*/
+    -webkit-tap-highlight-color: transparent;   /*将高亮设置为透明就可以了*/
+}
+input {
+    /*去掉移动端浏览器默认的外观样式 比如：输入框和按钮（这个在真机测试才能看到效果）*/
+    -webkit-appearance: none;
+}
+img,
+a {   /*禁用长按页面时弹出的菜单，一般a和img是不需要这个的（这个也是在真机测试才能看到效果）*/
+    -webkit-touch-callout: none;
+}
+ul {/*清除ul列表默认边距和小点*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #666;
+    /*取消a链接下划线*/
+    text-decoration: none;
+}
+img {
+    /*图片默认会有底侧空白*/
+    vertical-align: middle;
+}
+/*swiper CSS*/
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination-bullet {
+    /*我们想要修改样式，就复制类名，然后给他层叠掉，层叠不掉就是权重不够，直接来个important*/
+    background-color: #fff!important;
+}
+.app {
+    height: 45px;
+}
+.app ul li {
+    float: left;
+    height: 45px;
+    background-color: #333;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+.app ul li:nth-child(1) {
+    width: 8%;
+    /*像这样图片与文字差不多大小的（因为虽然默认的是基线对其，可是图片和文字差不多大，就看不出偏差了），可以给 text-align center*/
+
+}
+.app ul li:nth-child(1) img {
+    /*只写宽度，高度跟着一起等比例缩放*/
+    width: 10px;
+}
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+.app ul li:nth-child(2) img {
+    width: 30px;
+    /*但是像这种图片比文字大的。就要让图片和文字的中线对齐*/
+    vertical-align: middle;
+}
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: rgb(246,53,21);
+}
+/*搜索*/
+.search-wrap {
+    /*只不过是我们的swiper把搜索栏层级压下去了，我们提升它的层级就可以了*/
+    z-index: 9999;
+    position: fixed;
+    /*固定定位的盒子一定要给宽*/
+    width: 100%;
+    /*要给固定定位的盒子最大和最小宽度，不然放大的时候有可能会超出盒子*/
+    max-width: 640px;
+    min-width: 320px;
+    /*这样就不会出现清除浮动的问题了*/
+    height: 44px;
+    /*外边距合并问题，子盒子给margin 父盒子会跟着一起动*/
+    overflow: hidden;
+}
+.search-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../img/btn.png") no-repeat;
+    /*背景缩放*/
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+    width: 40px;
+    height: 44px;
+}
+.search-login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    line-height: 45px;
+    width: 40px;
+    height: 44px;
+}
+.search {
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 7px 50px;
+}
+.jd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 15px;
+    background: url("../img/jd.png");
+    background-size: 20px 15px;
+    margin: 8px 8px 0 15px;
+}
+.jd::after {
+    position: absolute;
+    right: -8px;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+.sou {
+    /*二倍精灵图做法
+    ·在firework里面把精灵图等比例缩放为原来的一半
+    ·之后根据大小测量坐标
+    ·注意代码里面background-size也要写：精灵图原来宽度的一半（因为我们只是在firework里缩小为原来的一半，代码里放的图片还是原来的大小）*/
+    position: absolute;
+    top: 8px;
+    left: 48px;
+    width: 18px;
+    height: 15px;
+    background: url("../img/jd-sprites.png") no-repeat -82px 0;    /*后面背景位置的0不能省略*/
+    background-size: 200px auto;
+}
+.slider img {
+    /*父亲有多宽，我就有多宽*/
+    width: 100%;
+}
+        /*品牌日*/
+.brand {
+    /*要想让大盒子有圆角效果，我们需要把里面的图片溢出隐藏就可以看到圆角效果了*/
+    overflow: hidden;
+    border-radius: 10px 10px 0 0 ;
+}
+.brand div {
+    width: 33.33%;
+    float: left;
+}
+.brand div img {
+    /*盒子有多宽，图片有多宽*/
+    width: 100%;
+}
+/*nav*/
+.nav {
+    padding-top: 5px;
+}
+.nav a {
+    float: left;
+    width: 20%;
+    /*不仅文字要居中，图片也要居中*/
+    text-align: center;
+}
+.nav a img {
+    width: 40px;
+    margin: 10px 0;
+}
+.nav a span {
+    display: block;
+}
+/*news*/
+.news {
+    margin-top: 20px;
+}
+.news a {
+    float: left;
+    /*有了CSS3盒子模型，边框就会算在里面，就不会撑开盒子了*/
+    box-sizing: border-box;
+}
+.news a:nth-child(1) {
+    width: 50%;
+}
+   /*第三种写法，从第二个开始往后选*/
+.news a:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
+   /*第二种写法*/
+/*.news a:nth-child(2),
+.news a:nth-child(3) {
+    width: 25%;
+}*/
+   /*第一种写法*/
+/*.news a:nth-child(2) {
+    width: 25%;
+}.news a:nth-child(3) {
+     width: 25%;
+ }*/
+.news a img {
+    width: 100%;
+}
+.yard img {
+    width: 100%;
+}
+.book {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 0 0 0 10px;
+    background-color: #ccc;
+}
+.book span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 100%;
+   /* 从头部开始的线性渐变*/
+    background: linear-gradient(90deg, #45CAFF,#1471FB);
+    /*规定背景的绘制区域*/
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.book p {
+    margin: 0;
+    font-size: 10px;
+}
+.book img{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 5px 7px 0;
+}
+.oil {
+    float: left;
+    width: 50%;
+}

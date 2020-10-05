@@ -1,0 +1,294 @@
+/*公共样式：多个页面可以一块来使用，其他页面也有这个内容*/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+@font-face {
+    /*这里由于不是在根目录了，所以要修改一下路径*/
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?dcv8tj');
+    src:  url('../fonts/icomoon.eot?dcv8tj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?dcv8tj') format('truetype'),
+    url('../fonts/icomoon.woff?dcv8tj') format('woff'),
+    url('../fonts/icomoon.svg?dcv8tj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+   /*我们怕其他地方也会应用字体图标，所以我们调用的时候加上父元素*/
+.fr .icomoon {
+    font-family: 'icomoon';
+    font-size: 16px;
+    /*我们这个盒子是居中的，但是现在文字有点偏下，但是我们不能给margin-top（因为i标签是行内元素，没有上下外边距） 所以让行高小于高 就可以居中对齐了*/
+    line-height: 26px;
+}
+
+      /*版心*/
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+ /*其他字体可能还会用到红色，先指定个公共类*/
+.style-red {
+    color: #c81623;
+}
+   /*在li 里面加个小盒子（小竖线）撑开盒子*/
+.spacer {
+    height: 12px;
+    width: 1px;
+    margin: 9px 15px 0;
+    background-color: #666666;
+}
+   /*顶部快捷导航*/
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+.shortcut li {
+    float: left;
+}
+  /* header 开始*/
+.header {
+    position: relative;
+    height: 105px;
+}
+.logo {
+   /* 用定位来调整盒子*/
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 172px;
+    height: 55px;
+}
+.logo a {
+    /*因为a是行内元素，不能设置宽高，所以我们要转换成块级元素*/
+    display: block;
+    width: 172px;
+    height: 55px;
+    /*由于这里的 PNG8 格式有点不清晰，所以我们在重新切图，选择PNG24就可以了*/
+    background: url("../img/logo.png") no-repeat;
+    /*但是文字不要显示出来，要用text-indent（首行缩进把它移到盒子外）移动到盒子外面（text-indent：-9999px） */
+    /*text-indent: -999px;*/
+    /*然后overflow：hidden（溢出隐藏）文字就不显示了*/          /*这是淘宝的做法*/
+    /*overflow: hidden;*/
+
+    /*直接给 font-size：0（设置文字为0像素）就看不到文字了*/      /*这是京东的做法*/
+    font-size: 0;
+}
+.search {
+    position: absolute;
+    top: 25px;
+    left: 347px;
+}
+.text {
+    float: left;
+    width: 454px;
+    height: 32px;
+    border: 2px solid #b1191a;
+    /*用padding 可能会撑开盒子，所以要在宽度里减去*/
+    padding-left: 10px;
+}
+.btn {
+    float: left;
+    width: 82px;
+    height: 32px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #b1191a;
+}
+.hotwords {
+    position: absolute;
+    top: 65px;
+    left: 347px;
+}
+.hotwords a {
+    /*因为a 是行内块元素，不能给上下外边距*/
+    margin: 0 10px;
+}
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 63px;
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+.car {
+    font-family: 'icomoon';
+    color: #dc6161;
+}
+.arrow {
+    font-family: 'icomoon';
+    margin-left: 5px;
+}
+.count {
+    /*count 统计部分用绝对定位做，也不要给宽度，因为可能买的件数比较多，我们让件数自己撑开就好了，给一个高度就好了*/
+    position: absolute;
+    /*应该是左侧对齐   文字才应该正常的往右走显示*/
+    left: 100px;
+    top: -4px;
+    color: #fff;
+    height: 14px;
+    /*默认继承了父亲的 line-height 所以这个小盒子文字没有居中*/
+    line-height: 14px;
+    padding: 0 3px;
+    /*高度的一半就是圆角*/
+    border-radius: 7px 7px 7px 0;
+    background-color: #e60012;
+}
+      /*导航栏*/
+.nav {
+    height: 45px;
+    border-bottom: 2px solid #b1191a;
+}
+.dorpdown {
+    width: 209px;
+    height: 45px;
+}
+.dorpdown .dt {
+    /*把dt设置和父盒子一样大 就把下面的dd挤下来了*/
+    width: 100%;
+    height: 100%;
+    background-color: #b1191a;
+    line-height: 45px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.dorpdown .dd {
+    height: 465px;
+    background-color: #c81623;
+}
+.menu-item {
+    /*给li指定高度，既撑开盒子，又是通栏的*/
+    height: 31px;
+    line-height: 31px;
+    margin-left: 1px;
+    padding: 0 10px;
+    transition: all .5s;
+}
+.menu-item:hover {
+    background-color: #fff;
+    padding-left: 20px;
+}
+    /*鼠标经过li 里面的a 变颜色*/
+.menu-item:hover a {
+    font-size: 14px;
+    color: #c81623;
+}
+.menu-item a {
+    font-size: 14px;
+    color: #fff;
+}
+.menu-item i {
+    /*右浮动是顶着padding的，所以我们再给他一个右边的padding值就可以了*/
+    float: right;
+    font-family: 'icomoon';
+    font-size: 9px;
+    color: #fff;
+}
+.navitems {
+    /*每个a都有 左右 padding 25px的间距，然而第一个li距左边还多了10px   所以我们让整个右侧导航栏向右走10px就好了（如果给li指定 那就是每个li都是走10px了，那样就大了）*/
+    margin-left: 10px;
+}
+.navitems li {
+    float: left;
+}
+.navitems li a {
+    display: block;
+    height: 45px;
+    line-height: 46px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+   /*footer 部分*/
+.footer {
+    height: 417px;
+    background-color: #f5f5f5;
+    /*因为我们在 base.css 声明了 box-sizing: border-box; 新盒模型，这样给padding值的时候 就不用担心撑大盒子了*/
+    padding-top: 30px;
+}
+.mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.mod_service li {
+    float: left;
+    height: 79px;
+    /*平均划分成五等份*/
+    width: 240px;
+}
+/*既然图片大小一样，位置一样，我们就给他一个公共类*/
+.mod_service_icons {
+    /*浮动的盒子可以直接给大小的，不需要转换*/
+    /*因为li是块级元素，我们要想指定大小，要么加上display或者float*/
+    float: left;
+    width: 50px;
+    height: 50px;
+    /*注意文件路径，要求它的上一级找 img*/
+    background: url("../img/icons.png") no-repeat;
+    margin-left: 35px;
+}
+.mod_service_zheng {
+    background-position: -252px -3px;
+}
+.mod_service_tit {
+    float: left;
+    margin-left: 5px;
+}
+.mod_service_tit h5 {
+    /*h5 标题特性：默认文字周围有空白距离 所以测量时给个大概就好了*/
+    margin: 5px 0;
+}
+.mod_service_kuai {
+    background-position: -254px -54px;
+}
+.mod_service_bao {
+    background-position: -256px -106px;
+}
+.mod_service_te {
+    background-position: -257px -156px;
+}
+.mod_service_bang {
+    background-position: -259px -209px;
+}
+.mod_heip {
+    height: 187px;
+    border-bottom: 1px solid #ccc;
+}
+.mod_heip_item {
+    float: left;
+    width: 200px;
+    padding: 20px 0 0 50px;
+}
+.mod_heip_item dt {
+    height: 30px;
+    font-size: 16px;
+    color: #333;
+}
+.mod_heip_item dd {
+    height: 21px;
+    font-size: 12px;
+    color: #666666;
+}
+.mod_heip_APP dt,
+.mod_heip_APP p{
+    margin-left: 15px;
+}
+.mod_heip_APP img {
+    padding-bottom: 7px;
+}
+.mod_copyright {
+    text-align: center;
+}
+.mod_copyright_links {
+    margin: 20px 0 15px 0;
+}
+.mod_copyright_links span {
+    margin: 0 13px;
+}

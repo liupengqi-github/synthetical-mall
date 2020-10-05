@@ -1,0 +1,155 @@
+/*列表页-手机页面！样式*/
+   /*  秒杀   */
+.skill {
+    position: absolute;
+    top: 43px;
+    left: 185px;
+    height: 32px;
+    border-left: 1px solid #b1191a;
+    padding: 3px 0 0 13px;
+}
+.sk_list li {
+    float: left;
+    margin-left: 30px;
+    /*通常 有了行高的情况下就不需要再给高度*/
+    line-height: 45px;
+}
+.sk_list li a {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+}
+.sk_list li a:hover {
+    color: #c81523;
+}
+.sk_con li {
+    float: left;
+    margin-left: 50px;
+    line-height: 45px;
+
+}
+.sk_con li a {
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'icomoon';
+}
+.sk_con li a:hover {
+    color: #c81523;
+}
+/*列表的内容区域*/
+.sk_hd {
+    margin-top: 25px;
+}
+.sk_goods {
+    position: relative;
+    float: left;
+    width: 288px;
+    height: 460px;
+    border: 1px solid transparent;
+    /*如果我们给它一个右边距，就会出现最后一个盒子由于宽度不够，被挤到下面了   所以我们就要给它父亲足够的宽度，这样他就不会出现宽度不够了*/
+    margin: 0 12px 16px 0;
+}
+.sk_goods:hover {
+    border: 1px solid #e12228;
+}
+
+.sk_hd ul {
+    width: 1213px;
+}
+.sk_goods_title {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    padding: 10px;
+}
+.sk_goods_price {
+    padding: 0 10px;
+}
+.sk_goods_price em {
+    font-size: 22px;
+    color: #e60012;
+}
+.sk_goods_price del {
+    font-size: 14px;
+    color: #a4a4a4;
+    font-weight: 700;
+}
+.sk_goods_progress {
+    padding: 0 10px;
+}
+.bar{
+    /*有了行内块元素，就可以用 vertical-align 来让盒子对齐*/
+    display: inline-block;
+    vertical-align: middle;
+    height: 10px;
+    width: 130px;
+    border: 1px solid #e12228;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.bar_in {
+    width: 87%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ed282e;
+}
+.sk_goods_progress i,
+.sk_goods_progress em{
+    color: #e12228;
+}
+.sk_goods_buy {
+    /*我们要想让盒子贴这底侧的话，用定位是最好的   用了定位就不用转为块级元素了*/
+    position: absolute;
+    bottom: 0;
+   /* a 是行内块元素，要想让他有宽高 就要转换为块级元素*/
+    height: 50px;
+    /*用定位的话，就要给盒子宽高了*/
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    background-color: #b1191a;
+}
+.page {
+    margin: 40px 0;
+    /*div 里面装的是文字内容 行内块、行内块元素 都可以使用 text-align: center 实现居中对齐*/
+    text-align: center;
+}
+.page_num a {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    width: 36px;
+    border: 1px solid #cccccc;
+    background-color: #f7f7f7;
+}
+/*由于权重问题要加上父亲，不然会被层叠掉*/
+.page_num .pn_prev,
+.page_num .pn_next{
+    width: 82px;
+}
+.page_num .current,
+.page_num .dotted {
+    border: 1px solid transparent;
+    background-color: #fff;
+}
+.page_skip input {
+    width: 46px;
+    height: 36px;
+    border: 1px solid #ccc;
+    text-align: center;
+    /*过渡写在本身上，谁做动画给谁加*/
+    transition: all .4s;
+}
+/*表单获得焦点后，边框和宽度发生变化*/
+.page_skip input:focus {
+    width: 86px;
+    border: 1px solid skyblue;
+}
+.page_skip button {
+    width: 54px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}

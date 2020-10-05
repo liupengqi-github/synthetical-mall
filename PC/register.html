@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/reg.js"></script>
+    <!--    注册页面里面的内容是隐私的，是不能让别人搜到的，所以注册页面怎么简单怎么写，三大优化标签页不需要写-->
+</head>
+<body>
+    <div class="w">
+            <!--header-->
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+        </div>
+             <!--registerarea-->
+        <div class="registerarea">
+            <h3>
+                注册新用户
+                <em>我有账号，去<a href="login.html">登陆</a></em>
+            </h3>
+            <div class="reg_form">
+                <!--注册页面都是来提交的，所以要用表单给包裹起来-->
+                <form action="demo.php" method="post">
+                    <ul>
+                        <li>
+                            <label for="qq">QQ：</label>
+                            <input type="text" class="inp" id="qq">
+                            <span>
+
+                            </span>
+                        </li>
+                        <li>
+                            <label for="nc">昵称：</label>
+                            <input type="text" class="inp" id="nc">
+                            <span>
+
+                            </span>
+                        </li>
+                        <li>
+                            <label for="tel">手机号：</label>
+                            <input type="text" class="inp" id="tel">
+                            <span class="">
+
+                            </span>
+                        </li>
+                        <li>
+                            <label for="code">短信验证码：</label>
+                            <input type="text" class="inp" id="code">
+                            <span></span>
+                        </li>
+                        <li>
+                            <label for="Login">登录密码：</label>
+                            <input type="password" class="inp" id="Login">
+                            <span >
+
+                            </span>
+                        </li>
+                        <li class="safe">
+                            安全程度
+                            <em class="ruo">弱</em>
+                            <em class="zhong">中</em>
+                            <em class="qiang">强</em>
+                        </li>
+                        <li>
+                            <label for="enter">确认密码：</label>
+                            <input type="password" class="inp" id="enter">
+                            <span>
+
+                            </span>
+                        </li>
+                        <!-- 做的时候最好是给起一个类名，更好的避免冲突-->
+                        <li class="agree">
+                            <input type="checkbox">同意协议并注册
+                            <a href="#">《知果果用户协议》</a>
+                        </li>
+                        <li class="over">
+                            <input type="submit" value="完成注册">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

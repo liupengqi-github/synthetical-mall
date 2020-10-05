@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--解压后，我们得知字体图标本周就是字体文件，在fonts文件里就展示了各种浏览器能支持的字体，注意这个压缩包不要被删掉，我们后面还有用的-->
+    <style>
+        /*这里的样式我们直接复制在 icomoonn字库解压后的 style.css 文件就可以*/
+        @font-face {
+            /*这个字体名称要注意 icomoon   （默认的是icomoon   我们也可以改成其他名字   比如自己的名字）*/
+            font-family: 'Liu';
+            /*一定要注意路径的问题 因为我们是放在根目录下的，所以不用更改*/
+            src:  url('fonts/icomoon.eot?sedivr');
+            src:  url('fonts/icomoon.eot?sedivr#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?sedivr') format('truetype'),
+            url('fonts/icomoon.woff?sedivr') format('woff'),
+            url('fonts/icomoon.svg?sedivr#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        /*然后在 style样式里面 引用 icomoonn字库里面的字体就好了*/
+        span,
+        div,
+        strong {
+            font-family: 'Liu';
+            font-size: 50px;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+                        <!--我们想要哪个图标就直接复制后面的小正方形 -->
+<span> </span>
+<div> </div>
+<!--
+如果我们图标库里的字体图标不够用了，我们不要删了重新下载，这样之前的就没有了，我们直接在 icomoonn字库里面 选择左上角的import icons 添加之前的selection.json文件，就可以看到之前的字体图标了
+-->
+<strong></strong>
+</body>
+</html>

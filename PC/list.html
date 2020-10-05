@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                                        <!-- 由于列表页面的头部和底部是一样的，所以就直接复制index页面的代码再引用公共样式就可以了-->
+    <meta charset="UTF-8">
+    <title>列表页-手机页面！</title>
+    <!--网站说明-->
+    <meta name="description" content="品优购商城-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!">
+    <!--关键字-->
+    <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,品优购">
+    <!--使用ico图标：-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--引入 css 初始化的css文件-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--引入公共样式的css文件-->
+    <link rel="stylesheet" href="css/common.css">
+    <!--引入 list.css文件-->
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+      <!--顶部快捷导航开始-->
+      <div class="shortcut">
+          <div class="w">
+              <div class="fl">
+                  <ul>
+                      <li>品优购欢迎您！ </li>
+                      <li><a href="#">请登录</a>
+                          <a href="#" class="style-red">免费注册</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="fr">
+                  <ul>
+                      <li><a href="#">我的订单</a></li>
+                      <li class="spacer"></li>
+                      <li>
+                          <a href="#">我的品优购</a>
+                          <i class="icomoon"> </i>
+                      </li>
+                      <li class="spacer"></li>
+                      <li><a href="#">品优购会员</a></li>
+                      <li class="spacer"></li>
+                      <li><a href="#">企业采购</a></li>
+                      <li class="spacer"></li>
+                      <li>
+                          <a href="#">关注品优购</a>
+                          <i class="icomoon"> </i>
+                      </li>
+                      <li class="spacer"></li>
+                      <li>
+                          <a href="#">客户服务</a>
+                          <i class="icomoon"> </i>
+                      </li>
+                      <li class="spacer"></li>
+                      <li>
+                          <a href="#">网站导航</a>
+                          <i class="icomoon"> </i>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!--顶部快捷导航结束-->
+      <!--header 开始 -->
+      <div class="header w">
+          <!--logo-->
+          <div class="logo">
+              <!--在logo里面放一个 h1的标签，目的是为了提权，告诉搜索引擎，这个地方很重要--><!--（h1标签是最重要   都是给logo留着的）-->
+              <!--h1 里面放一个链接，让他能返回首页 给链接一个大小和logo背景图片-->
+              <!-- 链接里面要放文字（网站名称） 让搜索引擎不仅能知道logo，还能知道它的网站名称-->
+              <h1><a href="index.html" title="品优购商城">品优购</a></h1>
+          </div>
+          <!--skill：秒杀-->
+          <div class="skill">
+              <img src="upload/sk.png">
+          </div>
+          <!--search-->
+          <div class="search">
+              <!-- 这里让文本框默认有字 用placeholder value都可以，只不过placeholder在输入文字的时候可以自动消失-->
+              <input type="text" class="text" placeholder="请搜索内容...">
+              <input type="button" value="搜索" class="btn">
+          </div>
+          <!--hotwords -->
+          <div class="hotwords">
+              <!--因为我们做的是热词 不是导航栏，不需要再加ul、li了 直接加a标签就可以了-->
+              <a href="#" class="style-red">优惠购首发 </a>
+              <a href="#">亿元优惠</a>
+              <a href="#">9.9元团购</a>
+              <a href="#">美满99减30</a>
+              <a href="#">办公用品</a>
+              <a href="#">电脑</a>
+              <a href="#">通信</a>
+          </div>
+          <!--shopcar-->
+          <div class="shopcar">
+              <i class="car"> </i> 我的购物车 <i class="arrow"> </i>
+              <i class="count">8</i>
+          </div>
+      </div>
+      <!--header 结束-->
+      <!-- nav 开始 -->
+      <div class="nav">
+          <div class="w">
+              <div class="sk_list fl">
+                  <ul>
+                      <li><a href="#">品优秒杀</a></li>
+                      <li><a href="#">即将售罄</a></li>
+                      <li><a href="#">超值低价</a></li>
+                  </ul>
+              </div>
+              <div class="sk_con fl">
+                  <ul>
+                      <li><a href="#">女装</a></li>
+                      <li><a href="#" class="style-red">女鞋</a></li>
+                      <li><a href="#">男装</a></li>
+                      <li><a href="#">男鞋</a></li>
+                      <li><a href="#">母婴童装</a></li>
+                      <li><a href="#">食品</a></li>
+                      <li><a href="#">智能数码</a></li>
+                      <li><a href="#">运动户外</a></li>
+                      <li><a href="#">更多分类  </a></li>
+                  </ul></div>
+          </div>
+      </div>
+      <!--nav 结束-->
+
+      <!--列表页的内容区域-->
+      <div class="sk_container w">
+          <div class="sk_bd">
+              <img src="upload/bg_01.png">
+          </div>
+          <div class="sk_hd clearfix">    <!-- 因为我们没有给父元素设置宽高，所以底下的盒子会过来占地方，所以就要使用清除浮动-->
+              <ul>
+                  <li class="sk_goods">
+                          <a href="detail.html">
+                              <img src="upload/goods.png">
+                              <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                          </a>
+                          <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                          <div class="sk_goods_progress">
+                                已售<i>87%</i>
+                                <div class="bar">
+                                    <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                                </div>
+                                剩余<em>29</em>件
+                          </div>
+                          <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+                  <li class="sk_goods">
+                      <img src="upload/goods.png">
+                      <h4 class="sk_goods_title">Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</h4>
+                      <p class="sk_goods_price"><em>¥6088</em> <del>￥6988</del></p>
+                      <div class="sk_goods_progress">
+                          已售<i>87%</i>
+                          <div class="bar">
+                              <div class="bar_in"></div>    <!--进度条的做法就是一个带边框的大盒子里面套一个带背景的小盒子，给小盒子设置百分比的宽度就可以-->
+                          </div>
+                          剩余<em>29</em>件
+                      </div>
+                      <a href="#" class="sk_goods_buy">立即抢购</a>
+                  </li>
+              </ul>
+          </div>
+          <!--page 分页制作-->
+          <div class="page">
+              <!--里面装行内盒子比较方便，装div盒子还需要加浮动，用margin-left挤-->
+              <span class="page_num">
+                  <a href="#" class="pn_prev">&lt;&lt;上一页</a>
+                  <a href="#">1</a>
+                  <a href="#" class="current">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#" class="dotted">...</a>
+                  <a href="#" class="pn_next">下一页&gt;&gt;</a>
+              </span>
+              <span class="page_skip">
+                  共十页 到第
+                  <input type="text">
+                  页
+                  <button>确认</button>
+              </span>
+          </div>
+      </div>
+      <!--列表页的内容区域-->
+
+      <!--footer 开始-->
+      <div class="footer">
+          <div class="w">
+              <!--mod_service  服务模块-->
+              <div class="mod_service">
+                  <ul>
+                      <li>
+                          <i class="mod_service_icons mod_service_zheng"></i>
+                          <div class="mod_service_tit">
+                              <h5>正品保障</h5>
+                              <p>正品保障，提供发票</p>
+                          </div>
+                      </li>
+                      <li>
+                          <i class="mod_service_icons mod_service_kuai"></i>
+                          <div class="mod_service_tit">
+                              <h5>极速物流</h5>
+                              <p>急速物流，急速送达</p>
+                          </div>
+                      </li>
+                      <li>
+                          <i class="mod_service_icons mod_service_bao"></i>
+                          <div class="mod_service_tit">
+                              <h5>无忧售后</h5>
+                              <p>7天无理由退换货</p>
+                          </div>
+                      </li>
+                      <li>
+                          <i class="mod_service_icons mod_service_te"></i>
+                          <div class="mod_service_tit">
+                              <h5>特色服务</h5>
+                              <p>私人定制家电套餐</p>
+                          </div>
+                      </li>
+                      <li>
+                          <i class="mod_service_icons mod_service_bang"></i>
+                          <div class="mod_service_tit">
+                              <h5>帮助中心</h5>
+                              <p>您的购物指南</p>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <!-- mod_heip 帮助模块-->
+              <div class="mod_heip">
+                  <dl class="mod_heip_item">
+                      <dt>购物指南</dt>
+                      <dd>购物流程</dd>
+                      <dd>会员介绍</dd>
+                      <dd>生活旅行/团购</dd>
+                      <dd>常见问题</dd>
+                      <dd>大家电</dd>
+                      <dd>联系客服</dd>
+                  </dl>
+                  <dl class="mod_heip_item">
+                      <dt>配送方式</dt>
+                      <dd>上门自提</dd>
+                      <dd>211限时达</dd>
+                      <dd>配送服务查询</dd>
+                      <dd>配送费收取标准</dd>
+                      <dd>海外配送</dd>
+                  </dl>
+                  <dl class="mod_heip_item">
+                      <dt>支付方式</dt>
+                      <dd>货到付款</dd>
+                      <dd>在线支付</dd>
+                      <dd>分期付款</dd>
+                      <dd>邮局汇款</dd>
+                      <dd>公司转账</dd>
+                  </dl>
+                  <dl class="mod_heip_item">
+                      <dt>售后服务</dt>
+                      <dd>售后政策</dd>
+                      <dd>价格保护</dd>
+                      <dd>退款说明</dd>
+                      <dd>返修/退换货</dd>
+                      <dd>取消订单</dd>
+                  </dl>
+                  <dl class="mod_heip_item">
+                      <dt>特色服务</dt>
+                      <dd>夺宝岛</dd>
+                      <dd>DIY装机</dd>
+                      <dd>延保服务</dd>
+                      <dd>品优购E卡</dd>
+                      <dd>品优购通信</dd>
+                  </dl>
+                  <dl class="mod_heip_item mod_heip_APP">
+                      <dt>帮助中心</dt>
+                      <dd>
+                          <img src="upload/erweima.png">
+                          <p>品优购客户端</p>
+                      </dd>
+                  </dl>
+              </div>
+              <div class="mod_copyright">
+                  <div class="mod_copyright_links">
+                      <a href="#">关于我们  </a>    <span>|</span>
+                      <a href="#">联系我们  </a>    <span>|</span>
+                      <a href="#">联系客服  </a>    <span>|</span>
+                      <a href="#">商家入驻  </a>    <span>|</span>
+                      <a href="#">营销中心  </a>    <span>|</span>
+                      <a href="#">手机品优购  </a>  <span>|</span>
+                      <a href="#">友情链接  </a>    <span>|</span>
+                      <a href="#">销售联盟  </a>    <span>|</span>
+                      <a href="#">品优购社区  </a>  <span>|</span>
+                      <a href="#">品优购公益  </a>  <span>|</span>
+                      <a href="#">English Site  </a><span>|</span>
+                      <a href="#">Contact U</a>
+                  </div>
+                  <p mod_copyright_info>
+                      地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br>
+                      京ICP备08001421号京公网安备110108007702
+                  </p>
+              </div>
+          </div>
+      </div>
+      <!--footer 结束-->
+</body>
+</html>

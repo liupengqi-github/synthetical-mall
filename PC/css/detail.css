@@ -1,0 +1,359 @@
+/*详情页的样式文件*/
+.de_container {
+    margin-top: 25px;
+}
+.crumb_wrap {
+    height: 25px;
+}
+.crumb_wrap a {
+    margin-right: 10px;
+}
+.preview_wrap {
+    width: 400px;
+    height: 590px;
+}
+.preview_img {
+    position: relative;
+    height: 400px;
+    border: 1px solid #ccc;
+}
+.mask {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #fede4f;
+    /*可以设置我们盒子的透明度*/
+    opacity: .5;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+.big {
+    display: none;
+    position: absolute;
+    /*左边盒子宽度是400，在往右10px就可以了*/
+    left: 410px;
+    top: 0;
+    width: 500px;
+    height: 500px;
+    z-index: 999;
+    background-color: pink;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.bigImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.preview_list {
+    position: relative;
+    height: 60px;
+    margin-top: 60px;
+}
+.list_item {
+    margin: 0 auto;
+    width: 320px;
+}
+.list_item li {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: 2px solid transparent;
+    margin: 0 2px
+}
+.list_item li.current {
+    border-color: #c81623;
+}
+.arrow_prev,
+.arrow_next {
+    /*因为a 是行内元素，要把它转换为行内块*/
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    width: 21px;
+    height: 34px;
+}
+.arrow_prev {
+    left: 0;
+    background: url("../img/arrow_prew.jpg") no-repeat;
+}
+.arrow_next {
+    right: 0;
+    background: url("../img/arrow_next.jpg") no-repeat;
+}
+.preview_wrap .write li {
+    float: left;
+    margin: 25px 15px;
+}
+.itemInfo_wrap {
+    width: 718px;
+}
+.sku_name {
+    /*高度剩余法，只要给盒子高度，放下面的盒子自然就会有距离*/
+    height: 30px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+}
+.news {
+    height: 32px;
+    color: #e12228;
+}
+/*清除浮动主要是为了解决，父元素因为子级元素浮动引起的内部高度为0的问题*/
+.summary dl {
+    overflow: hidden;
+} 
+/*由于下面的盒子也需要浮动，所以我们就一起给大盒子指定浮动了*/
+.summary dt,
+.summary dd {
+    float: left;
+}
+.summary dt {
+    width: 60px;
+    margin-left: 10px;
+    /*还是因为没有给宽高的问题   给文字24px 把盒子撑开了  所以让行高等于高就可以了*/
+    line-height: 36px;
+}
+.summary_price,
+.summary_promotion{
+    position: relative;
+    padding: 10px 0;
+    background-color: #fee9eb;
+}
+.summary_promotion {
+   /* 指定上内边距为0 把上面的层叠掉 这样距离就不会大了*/
+    padding-top: 0;
+}
+.summary_price a {
+    color: #c81623;
+}
+.price {
+    font-size: 24px;
+    color: #e12228;
+}
+.remake {
+    /*我们想让他贴到右边，浮动是没用的，因为dd的盒子是自动撑开的，用右浮动也是贴着dd盒子，所以还是用定位*/
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.summary_promotion dd {
+    line-height: 36px;
+    width: 550px;
+}
+.summary_promotion em {
+    /*行内块元素 可以让文字对齐*/
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    color: #fff;
+    background-color: #c81623;
+    text-align: center;
+    line-height: 22px;
+}
+.summary_support {
+    line-height: 36px;
+}
+.summary_dispatching dd {
+    font-family: 'icomoon';
+    line-height: 36px;
+    width: 435px;
+}
+.summary_dispatching dd em {
+    margin: 0 31px;
+}
+.summary_dispatching dd i {
+    font-weight: 700;
+}
+.summary_dispatching dd h5 {
+    font-weight: normal;
+    font-size: 12px;
+}
+.summary a.current {
+   /* 直接给整个大盒子声明边框，这样每个盒子直接写类名就可以调用了*/
+    border-color: #c81623;
+}
+.choose_color dd a {
+   /* a是行内元素  然而在这里我们要转化为行内块元素，这样默认每个a之间还有一个小缝隙*/
+    display: inline-block;
+    width: 80px;
+    height: 41px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    text-align: center;
+    line-height: 41px;
+}
+.choose_version {
+    /*两个盒子有个距离 给外边距 要给整个盒子*/
+    margin: 7px 0;
+}
+.choose_type{
+   margin: 7px 0;
+}
+.choose_version a,
+.choose_volume a,
+.choose_type a,
+.choose_suit a{
+    display: inline-block;
+    /*因为下面的盒子高度都是一样的，宽度由于文字多少不一样，所以就用padding给撑开就可以*/
+    height: 32px;
+    padding: 0 13px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    text-align: center;
+    line-height: 32px;
+}
+.choose_btns {
+    margin-top: 10px;
+}
+.choose_amount {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 46px;
+}
+.choose_amount input {
+    width: 33px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    border: 1px solid #ccc;
+}
+.add,
+.reduce {
+    position: absolute;
+    right: 0;
+    width: 17px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.add {
+    top: 0;
+}
+.reduce {
+    /*鼠标禁止样式*/
+    cursor: not-allowed;   /*pointer 小手   move 移动 text 文本 help 帮助  wait 正忙 crosshair 十字线*/
+    bottom: 0;
+}
+.product_detail {
+    margin-bottom: 50px;
+}
+.addCar {
+    float: left;
+    width: 142px;
+    height: 46px;
+    background-color: #c81623;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    font-weight: 700;
+    margin-left: 19px;
+}
+.aside {
+    width: 208px;
+    border: 1px solid #ccc;
+}
+.tab_list {
+    height: 34px;
+}
+/*把背景颜色 底边框都给li  这样我们tab栏切换的时候其他的是不变的*/
+.tab_list li {
+    height: 33px;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 33px;
+}
+/*鼠标单击 li 变化样式   背景变白色   去掉下边框   文字变颜色*/
+.tab_list .current {
+    background-color: #fff;
+    color: red;
+    border-bottom: 0;
+}
+.first_tab {
+    width: 104px;
+
+}
+.second_tab {
+    width: 102px;
+    border-left: 1px solid #ccc;
+}
+.tab_con {
+    /*因为我们没有给宽度，用padding也是不会撑开盒子的*/
+    padding: 0 10px;
+}
+.tab_con li {
+    border-bottom: 1px solid #ccc;
+}
+.tab_con li h5 {
+    font-weight: 400;
+    /*让文字在一行内显示并且多出来的用省略号显示三部曲*/
+    /*文字强制在一行内显示*/
+    white-space: nowrap;
+    /*溢出文字隐藏*/
+    overflow: hidden;
+    /*文字溢出，用省略号代替*/
+    text-overflow: ellipsis;
+}
+.aside_price {
+    font-weight: 700;
+    margin: 10px 0;
+}
+.as_addCar {
+    display: block;
+    margin: 10px 50px;
+    width: 88px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}
+.detail_tab_list {
+    height: 39px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.detail_tab_list li {
+    float: left;
+    height: 39px;
+    /*因为每个盒子文字内容不一样，所以我们给一个左右padding就可以*/
+    padding: 0 20px;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+}
+.detail_tab_list .current {
+    color: #fff;
+    background-color: #c81623;
+}
+.detail {
+    width: 978px;
+    /*因为不知道盒子有多高，所以先随便给个高度，做完回来删*/
+}
+.item_info {
+    /*用margin可能会出现外边距合并的问题*/
+    padding: 25px 0 0 20px;
+    display: none;
+}
+.item_info li {
+    /*没有给高的话，我们用行高调整距离*/
+    line-height: 21px;
+}
+.more {
+    /*p标签是单独占一行的，就可以用浮动，浮到右边去*/
+    float: right;
+    font-weight: 700;
+    font-family: 'icomoon';
+}
